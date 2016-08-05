@@ -1,0 +1,488 @@
+<configuration>
+	<configSections>
+		<section name="ideal.davos.scheduletask.flows" type="iDeal.Davos.Schedule.Task.Configuration.FaasFlowConfigurationHandler, iDeal.Davos.Schedule.Task"/>
+	</configSections>
+	<ideal.davos.scheduletask.flows>
+		<!--
+            VERY IMPORTANT
+            
+            These flows will be loaded in dictionary with {url}_{clientId}_{clientSecret} key.
+            You can not use the same url,clientId and clientSecret for different flows. 
+            Please be careful with it!
+            -->
+		<!--PROD Begin-->
+		<!--MLP Begin-->
+		<!--
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\MLP\MLPBuckingham_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@bucking.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\MLP\MLPJanney_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@janney.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\MLP\MLPBrean_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@brean.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            
+			<flow url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml" outputPath="D:\FileTransfer\FaasReports\MLP\MLPRja_{yyyyMMdd.HHmmss}.xml" clientId="IpreoAccess@rja.com" clientSecret="Password1!" timeout="00:10:00" retry="3" postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report"/>
+			
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\MLP\MLPCrt_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@crt.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\MLP\MLPTudor_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@tudor.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\MLP\MLPLongbow_{yyyyMMdd.HHmmss}.xml"
+              clientId="aggregatorfeed@longbow.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\MLP\MLPBBandT_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@bbandt.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\MLP\MLPTopeka_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@topeka.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\MLP\MLPGugg_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@guggs.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\MLP\MLPGhsec_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@ghsec.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />            
+				
+			<flow url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml" outputPath="D:\FileTransfer\FaasReports\MLP\MLPEvercore_{yyyyMMdd.HHmmss}.xml" clientId="IpreoAccess@evercore.com" clientSecret="Password1!" timeout="00:10:00" retry="3" postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report"/>
+			
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\MLP\MLPBtig_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@btig.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\MLP\MLPLeerink_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@leerink.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\MLP\MLPABNAmro_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@abnamro.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\MLP\MLPITG_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@itg-ip"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\MLP\MLPOPCO_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@opp.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\MLP\MLPStephens_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@stephens.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\MLP\MLPWB_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@wb.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\MLP\MLPKeyBanc_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@key.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            -->
+		<flow url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml" outputPath="D:\FileTransfer\FaasReports\MLP\MLPDanskeBank_{yyyyMMdd.HHmmss}.xml" clientId="aggregatorfeed@danskeb.com" clientSecret="Password1!" timeout="00:10:00" retry="3" postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report"/>
+		<!--MLP End-->
+		<!--OneAccess Begin-->
+		<!--
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\OneAccess\OneAccessBtig_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@btig.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.OneAccess.OneAccessPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\OneAccess\OneAccessWilliamBlair_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@wb.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.OneAccess.OneAccessPostProcess, iDeal.iPlanner.Business.Report" />
+            -->
+		<flow url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml" outputPath="D:\FileTransfer\FaasReports\OneAccess\OneAccessEvercore_{yyyyMMdd.HHmmss}.xml" clientId="IpreoAccess@evercore.com" clientSecret="Password1!" timeout="00:10:00" retry="3" postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.OneAccess.OneAccessPostProcess, iDeal.iPlanner.Business.Report"/>
+		<!--
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\OneAccess\OneAccessITG_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@itg-ip"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.OneAccess.OneAccessPostProcess, iDeal.iPlanner.Business.Report" />
+            -->
+		<flow url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml" outputPath="D:\FileTransfer\FaasReports\OneAccess\OneAccessRJA_{yyyyMMdd.HHmmss}.xml" clientId="IpreoAccess@rja.com" clientSecret="Password1!" timeout="00:10:00" retry="3" postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.OneAccess.OneAccessPostProcess, iDeal.iPlanner.Business.Report"/>
+		<!--
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\OneAccess\OneAccessBrean_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@brean.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.OneAccess.OneAccessPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\OneAccess\OneAccessOPCO_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@opp.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.OneAccess.OneAccessPostProcess, iDeal.iPlanner.Business.Report" /> 
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\OneAccess\OneAccessCRC_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@crc.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.OneAccess.OneAccessPostProcess, iDeal.iPlanner.Business.Report" />             
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\OneAccess\OneAccessTudor_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@tudor.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.OneAccess.OneAccessPostProcess, iDeal.iPlanner.Business.Report" />            
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\OneAccess\OneAccessGhsec_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@ghsec.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.OneAccess.OneAccessPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\OneAccess\OneAccessJanney_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@janney.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.OneAccess.OneAccessPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\OneAccess\OneAccessLongbow_{yyyyMMdd.HHmmss}.xml"
+              clientId="aggregatorfeed@longbow.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.OneAccess.OneAccessPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\OneAccess\OneAccessGugg_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@guggs.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.OneAccess.OneAccessPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\OneAccess\OneAccessBuckingham_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@bucking.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.OneAccess.OneAccessPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\OneAccess\OneAccessStephens_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@stephens.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.OneAccess.OneAccessPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\OneAccess\OneAccessCrt_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@crt.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.OneAccess.OneAccessPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\OneAccess\OneAccessBBandT_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@bbandt.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.OneAccess.OneAccessPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\OneAccess\OneAccessMizuho_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@mizuho-sc"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.OneAccess.OneAccessPostProcess, iDeal.iPlanner.Business.Report" />
+            -->
+		<!--OneAccess End-->
+		<!--CorpAxe Begin-->
+		<flow url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=MLPRoleType,AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules&amp;$format=xml" outputPath="D:\FileTransfer\FaasReports\CorpAxeTransform\CorpAxeTransformEvercore_{yyyyMMdd.HHmmss}.xml" clientId="IpreoAccess@evercore.com" clientSecret="Password1!" timeout="00:10:00" retry="3" postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report"/>
+		<!--
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=MLPRoleType,AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\CorpAxeTransform\CorpAxeTransformLongbow_{yyyyMMdd.HHmmss}.xml"
+              clientId="aggregatorfeed@longbow.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=MLPRoleType,AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\CorpAxeTransform\CorpAxeTransformRja_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@rja.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=MLPRoleType,AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\CorpAxeTransform\CorpAxeTransformOPCO_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@opp.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=MLPRoleType,AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\CorpAxeTransform\CorpAxeTransformBtig_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@btig.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=MLPRoleType,AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\CorpAxeTransform\CorpAxeTransformBrean_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@brean.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=MLPRoleType,AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\CorpAxeTransform\CorpAxeTransformCRC_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@crc.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=MLPRoleType,AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\CorpAxeTransform\CorpAxeTransformTudor_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@tudor.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=MLPRoleType,AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\CorpAxeTransform\CorpAxeTransformJanney_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@janney.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=MLPRoleType,AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\CorpAxeTransform\CorpAxeTransformBuckingham_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@bucking.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=MLPRoleType,AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\CorpAxeTransform\CorpAxeTransformBBandT_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@bbandt.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=MLPRoleType,AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\CorpAxeTransform\CorpAxeTransformMizuho_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@mizuho-sc"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3"
+              postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report" />
+            -->
+		<!--CorpAxe RawData Feed-->
+		<!--
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/CorpAxe.svc/?$Components=Event,EventBroker,EventSchedule,EventContact,EventEntity,Meeting,MeetingEntity,InvestorMeetingContact,MeetingContact&amp;InvestorIds=[1494826742,1494695266]&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\CorpAxe\CorpAxeEvercore_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@evercore.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/CorpAxe.svc/?$Components=Event,EventBroker,EventSchedule,EventContact,EventEntity,Meeting,MeetingEntity,InvestorMeetingContact,MeetingContact&amp;InvestorIds=[1492126840,1492133138]&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\CorpAxe\CorpAxeLongbow_{yyyyMMdd.HHmmss}.xml"
+              clientId="aggregatorfeed@longbow.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/CorpAxe.svc/?$Components=Event,EventBroker,EventSchedule,EventContact,EventEntity,Meeting,MeetingEntity,InvestorMeetingContact,MeetingContact&amp;InvestorIds=[1495750863,1495753126,1495771228,1495766662,1495766334,1495739154,1496399529,1489198734,1495739151,1495766206,1495934934,1496194082,1495747050,1495740605,1495934913,1495746386,1495768434,1495895666,1495749008,1489195474,1495762751,1495769175,1495742476,1495744696,1496365631,1489194497,1495755084,1496210288,1495745712,1495998769,1495936388,1495771962,1495744279,1495739749,1495747510,1495771603,1495756346,1495772377,1495941206,1495758943,1495770622,1495759128,1495747556,1495736017,1496100200,1495753128,1495753596,1496343341,1495753122,1495754905,1495764523,1495753112,1495773037,1495772414,1495753114,1489196139,1495769795,1495765249,1495769585,1495756717,1496392801,1495771163,1495755999,1495771300]&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\CorpAxe\CorpAxeRja_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@rja.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/CorpAxe.svc/?$Components=Event,EventBroker,EventSchedule,EventContact,EventEntity,Meeting,MeetingEntity,InvestorMeetingContact,MeetingContact&amp;InvestorIds=[1495194527,1494967340,1487932413,1494997739,1494986439,1496100050,1494958412,1494997335,1487935254,1495003680,1493932773,1494985469,1494998448,1494993075,1493933702,1496399351,1493931998,1496343182,1493932814,1493932548,1493934074,1496365381,1493934247,1494930145,1493933189,1493932185,1494893090,1494997085,1494997402,1494968692,1494982431,1495936236]&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\CorpAxe\CorpAxeOPCO_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@opp.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/CorpAxe.svc/?$Components=Event,EventBroker,EventSchedule,EventContact,EventEntity,Meeting,MeetingEntity,InvestorMeetingContact,MeetingContact&amp;InvestorIds=[1496267324,1496289712,1496289111,1496267372]&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\CorpAxe\CorpAxeBtig_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@btig.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/CorpAxe.svc/?$Components=Event,EventBroker,EventSchedule,EventContact,EventEntity,Meeting,MeetingEntity,InvestorMeetingContact,MeetingContact&amp;InvestorIds=[1492103185,1491808329,1493318100,1494133976,1491705249,1495306406,1488119462,1492165546,1494133643,1491212175,1494134182,1488120033,1492188090,1491868634,1491918807,1488121319,1491216703,1491216892,1495141379,1488122879,1492934386,1493194857,1494961759]&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\CorpAxe\CorpAxeBrean_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@brean.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/CorpAxe.svc/?$Components=Event,EventBroker,EventSchedule,EventContact,EventEntity,Meeting,MeetingEntity,InvestorMeetingContact,MeetingContact&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\CorpAxe\CorpAxeCRC_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@crc.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/CorpAxe.svc/?$Components=Event,EventBroker,EventSchedule,EventContact,EventEntity,Meeting,MeetingEntity,InvestorMeetingContact,MeetingContact&amp;InvestorIds=[1492912952,1492912951]&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\CorpAxe\CorpAxeTudor_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@tudor.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/CorpAxe.svc/?$Components=Event,EventBroker,EventSchedule,EventContact,EventEntity,Meeting,MeetingEntity,InvestorMeetingContact,MeetingContact&amp;InvestorIds=[1495356957,1495365853,1495356960,1487823699]&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\CorpAxe\CorpAxeJanney_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@janney.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3" />
+            <flow
+              url="https://eq.newissue.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/CorpAxe.svc/?$Components=Event,EventBroker,EventSchedule,EventContact,EventEntity,Meeting,MeetingEntity,InvestorMeetingContact,MeetingContact&amp;InvestorIds=[1494725567]&amp;$format=xml"
+              outputPath="D:\FileTransfer\FaasReports\CorpAxe\CorpAxeBuckingham_{yyyyMMdd.HHmmss}.xml"
+              clientId="IpreoAccess@bucking.com"
+              clientSecret="Password1!"
+              timeout="00:10:00"
+              retry="3" />
+            -->
+		<!--CorpAxe End-->
+		<!--PROD End-->
+		<!--QX Begin-->
+		<!--MLP Begin-->
+		<flow url="https://web-eq.qx.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,AllMeetingCompanies,NonMlpEventContacts,NonMlpMeetingContacts,MlpMeetingContacts,MeetingAtMLP,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml" outputPath="D:\FileTransfer\FaasReports\MLPQX\MLPLehman_{yyyyMMdd.HHmmss}.xml" clientId="IpreoAccess@lehman.com" clientSecret="Password1!" timeout="00:10:00" retry="3" postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.Mlp.MlpPostProcess, iDeal.iPlanner.Business.Report"/>
+		<!--MLP End-->
+		<!--OneAccess Begin-->
+		<flow url="https://web-eq.qx.i-deal.com/IP/DavosWebService/DavosServices/API/Services/Feeds/MlpIpreoFY.svc/?$Components=AllEvents,AllMeetings,AllEventCorperates,AllEventInvestors,NonMlpEventContacts,MLPAnalystIndustry,MLPCompanyIndustry,MLPEventIndustry,MeetingTypesOffered,BrokerNm,ConferenceLocations,MLPLocationFlex,EventSchedules,MLPRoleType&amp;$format=xml" outputPath="D:\FileTransfer\FaasReports\OneAccessQx\OneAccessQxLehman_{yyyyMMdd.HHmmss}.xml" clientId="IpreoAccess@lehman.com" clientSecret="Password1!" timeout="00:10:00" retry="3" postProcessTaskTypeName="iDeal.iPlanner.Business.Report.Transforms.Faas.OneAccess.OneAccessPostProcess, iDeal.iPlanner.Business.Report"/>
+		<!--OneAccess End-->
+		<!--QX End-->
+	</ideal.davos.scheduletask.flows>
+	<system.net>
+		<defaultProxy>
+			<proxy usesystemdefault="False" bypassonlocal="True" proxyaddress="http://proxyqa-ny1:8080"/>
+		</defaultProxy>
+	</system.net>
+</configuration>

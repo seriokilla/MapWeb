@@ -1,0 +1,73 @@
+<configuration>
+	<configSections>
+		<section name="schedules" type="Ipreo.Davos.Utilities.Scheduler.ScheduleSectionHandler, Ipreo.Davos.Utilities.Scheduler"/>
+		<section name="schedulers" type="System.Configuration.NameValueFileSectionHandler, System, Version=1.0.5000.0,Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+		<section name="ipreo.radiant.asyncreport.domains" type="System.Configuration.NameValueFileSectionHandler, System, Version=1.0.5000.0,Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+		<section name="ipreo.davos.davosDataReaderService.domains" type="System.Configuration.NameValueFileSectionHandler, System, Version=1.0.5000.0,Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+		<section name="ideal.davos.asyncreport.domains" type="System.Configuration.NameValueFileSectionHandler, System, Version=1.0.5000.0,Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+		<section name="ipreo.davos.asyncreportdeletetask.domains" type="System.Configuration.NameValueFileSectionHandler, System, Version=1.0.5000.0,Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+		<section name="ideal.davos.schedulereport.domains.faas" type="System.Configuration.NameValueFileSectionHandler, System, Version=1.0.5000.0,Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+	</configSections>
+	<schedules>
+		<schedule name="Always" occurs="daily" interval="1" synchronize="false">
+			<daily_frequency>
+				<start_time>00:00:00</start_time>
+				<end_time>23:59:59</end_time>
+				<frequency>5000</frequency>
+			</daily_frequency>
+			<start_date>2009-04-17</start_date>
+			<end_date>2016-04-25</end_date>
+		</schedule>
+		<schedule name="DeleteAsyncReportTaskSchedule" occurs="daily" interval="1" synchronize="false">
+			<daily_frequency>
+				<start_time>00:00:00</start_time>
+				<end_time>00:00:00</end_time>
+			</daily_frequency>
+		</schedule>
+		<schedule name="EveryDayOnce" occurs="weekly" interval="1" synchronize="false">
+			<daily_frequency>
+				<start_time>13:00:00</start_time>
+				<end_time>13:00:00</end_time>
+			</daily_frequency>
+			<weekly>
+				<weekday>Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday</weekday>
+			</weekly>
+		</schedule>
+	</schedules>
+	<schedulers>
+		<add key="Ipreo.Radiant.Framework.AsyncReportManager.ReportShedTask, Ipreo.Radiant.Framework.AsyncReportManager" value="Always"/>
+		<!--<add key="Ipreo.Davos.ReportingServices.Data.ServiceHostTask, Ipreo.Davos.ReportingServices.Data" value="Always"/>
+						<add key="iDeal.Davos.AsyncReporting.Task.AsyncReportTask, iDeal.Davos.AsyncReporting.Task" value="Always"/>
+						<add key="iDeal.Davos.AsyncReporting.Task.DeleteAsyncReportTask, iDeal.Davos.AsyncReporting.Task" value="DeleteAsyncReportTaskSchedule"/>-->
+		<add key="iDeal.Davos.Schedule.Task.FaasBasicAuthTask, iDeal.Davos.Schedule.Task" value="EveryDayOnce"/>
+		<add key="Ipreo.Events.Davos.Schedule.Task.FaasFromDbBasicAuthTask, Ipreo.Events.Davos.Schedule.Task" value="EveryDayOnce"/>
+	</schedulers>
+	<appSettings>
+		<add key="scheduler_threads" value="10"/>
+		<add key="RadiantEventSourceName" value="Radiant Scheduler for IP"/>
+		<add key="DavosEventSourceName" value="Davos Scheduler for IP"/>
+		<add key="serviceName" value="DavosScheduler_IP"/>
+		<add key="serviceDisplayName" value="Ipreo Davos Scheduler for 'IP'"/>
+		<add key="serviceDescription" value="Hosts Davos Reporting generation engine and Davos Data provider"/>
+	</appSettings>
+	<ipreo.radiant.asyncreport.domains>
+		<add key="IP" value="D:\Program Files\Ipreo\Davos.Reporting.IP\"/>
+	</ipreo.radiant.asyncreport.domains>
+	<ipreo.davos.davosDataReaderService.domains>
+		<add key="IP" value="D:\Program Files\Ipreo\Davos.Reporting.IP\"/>
+	</ipreo.davos.davosDataReaderService.domains>
+	<ideal.davos.asyncreport.domains>
+		<add key="IP" value="D:\Program Files\Ipreo\Davos.Reporting.IP\"/>
+	</ideal.davos.asyncreport.domains>
+	<ipreo.davos.asyncreportdeletetask.domains>
+		<add key="IP" value="D:\Program Files\Ipreo\Davos.Reporting.IP\"/>
+	</ipreo.davos.asyncreportdeletetask.domains>
+	<ideal.davos.schedulereport.domains.faas>
+		<add key="IP" value="D:\Program Files\Ipreo\Davos.Reporting.IP\"/>
+	</ideal.davos.schedulereport.domains.faas>
+	<system.net>
+		<defaultProxy>
+			<proxy usesystemdefault="False" bypassonlocal="True" proxyaddress="http://proxyqa-ny1:8080"/>
+		</defaultProxy>
+	</system.net>
+</configuration>
